@@ -1,0 +1,1159 @@
+ERROR - 2026-10-05 02:40:38 --> Unknown column 'timeout_b' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('UPDATE `matches` SET `timeout_b` = 1, `updated_at` = \'2026-10-05 02:40:38\'
+WHERE `matches`.`id` IN (\'2\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `matches` SET `timeout_b` = 1, `updated_at` = \'2026-10-05 02:40:38\'
+WHERE `matches`.`id` IN (\'2\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `matches` SET `timeout_b` = 1, `updated_at` = \'2026-10-05 02:40:38\'
+WHERE `matches`.`id` IN (\'2\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2531): CodeIgniter\Database\BaseConnection->query('UPDATE `matches` SET `timeout_b` = :timeout_b:, `updated_at` = :updated_at:
+WHERE `matches`.`id` IN :matches.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(408): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(1074): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(711): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\Scoreboard.php(102): CodeIgniter\Model->update('2', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Scoreboard->update('2')
+10 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Scoreboard))
+11 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\futsal-scoreboard\\public\\index.php')
+CRITICAL - 2026-10-05 02:40:38 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'timeout_b' in 'field list'
+[Method: POST, Route: scoreboard/update/2]
+in SYSTEMPATH\Database\BaseConnection.php on line 863.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2531): CodeIgniter\Database\BaseConnection->query('UPDATE `matches` SET `timeout_b` = :timeout_b:, `updated_at` = :updated_at:
+WHERE `matches`.`id` IN :matches.id:', [...], false)
+ 2 SYSTEMPATH\Model.php(408): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\BaseModel.php(1074): CodeIgniter\Model->doUpdate([...], [...])
+ 4 SYSTEMPATH\Model.php(711): CodeIgniter\BaseModel->update([...], [...])
+ 5 APPPATH\Controllers\Scoreboard.php(102): CodeIgniter\Model->update('2', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Scoreboard->update('2')
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Scoreboard))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\futsal-scoreboard\\public\\index.php')
+CRITICAL - 2026-10-05 02:40:38 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'timeout_b' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `matches` SET `timeout_b` = 1, `updated_at` = \'2026-10-05 02:40:38\'
+WHERE `matches`.`id` IN (\'2\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `matches` SET `timeout_b` = 1, `updated_at` = \'2026-10-05 02:40:38\'
+WHERE `matches`.`id` IN (\'2\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2531): CodeIgniter\Database\BaseConnection->query('UPDATE `matches` SET `timeout_b` = :timeout_b:, `updated_at` = :updated_at:
+WHERE `matches`.`id` IN :matches.id:', [...], false)
+ 4 SYSTEMPATH\Model.php(408): CodeIgniter\Database\BaseBuilder->update()
+ 5 SYSTEMPATH\BaseModel.php(1074): CodeIgniter\Model->doUpdate([...], [...])
+ 6 SYSTEMPATH\Model.php(711): CodeIgniter\BaseModel->update([...], [...])
+ 7 APPPATH\Controllers\Scoreboard.php(102): CodeIgniter\Model->update('2', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Scoreboard->update('2')
+ 9 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Scoreboard))
+10 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\futsal-scoreboard\\public\\index.php')
+CRITICAL - 2026-10-05 02:40:38 --> [Caused by] mysqli_sql_exception: Unknown column 'timeout_b' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('UPDATE `matches` SET `timeout_b` = 1, `updated_at` = \'2026-10-05 02:40:38\'
+WHERE `matches`.`id` IN (\'2\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `matches` SET `timeout_b` = 1, `updated_at` = \'2026-10-05 02:40:38\'
+WHERE `matches`.`id` IN (\'2\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `matches` SET `timeout_b` = 1, `updated_at` = \'2026-10-05 02:40:38\'
+WHERE `matches`.`id` IN (\'2\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2531): CodeIgniter\Database\BaseConnection->query('UPDATE `matches` SET `timeout_b` = :timeout_b:, `updated_at` = :updated_at:
+WHERE `matches`.`id` IN :matches.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(408): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(1074): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(711): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\Scoreboard.php(102): CodeIgniter\Model->update('2', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Scoreboard->update('2')
+10 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Scoreboard))
+11 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\futsal-scoreboard\\public\\index.php')
+ERROR - 2026-10-05 02:40:42 --> Unknown column 'timeout_b' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('UPDATE `matches` SET `timeout_b` = 0, `updated_at` = \'2026-10-05 02:40:42\'
+WHERE `matches`.`id` IN (\'2\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `matches` SET `timeout_b` = 0, `updated_at` = \'2026-10-05 02:40:42\'
+WHERE `matches`.`id` IN (\'2\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `matches` SET `timeout_b` = 0, `updated_at` = \'2026-10-05 02:40:42\'
+WHERE `matches`.`id` IN (\'2\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2531): CodeIgniter\Database\BaseConnection->query('UPDATE `matches` SET `timeout_b` = :timeout_b:, `updated_at` = :updated_at:
+WHERE `matches`.`id` IN :matches.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(408): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(1074): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(711): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\Scoreboard.php(102): CodeIgniter\Model->update('2', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Scoreboard->update('2')
+10 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Scoreboard))
+11 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\futsal-scoreboard\\public\\index.php')
+CRITICAL - 2026-10-05 02:40:42 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'timeout_b' in 'field list'
+[Method: POST, Route: scoreboard/update/2]
+in SYSTEMPATH\Database\BaseConnection.php on line 863.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2531): CodeIgniter\Database\BaseConnection->query('UPDATE `matches` SET `timeout_b` = :timeout_b:, `updated_at` = :updated_at:
+WHERE `matches`.`id` IN :matches.id:', [...], false)
+ 2 SYSTEMPATH\Model.php(408): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\BaseModel.php(1074): CodeIgniter\Model->doUpdate([...], [...])
+ 4 SYSTEMPATH\Model.php(711): CodeIgniter\BaseModel->update([...], [...])
+ 5 APPPATH\Controllers\Scoreboard.php(102): CodeIgniter\Model->update('2', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Scoreboard->update('2')
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Scoreboard))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\futsal-scoreboard\\public\\index.php')
+CRITICAL - 2026-10-05 02:40:42 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'timeout_b' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `matches` SET `timeout_b` = 0, `updated_at` = \'2026-10-05 02:40:42\'
+WHERE `matches`.`id` IN (\'2\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `matches` SET `timeout_b` = 0, `updated_at` = \'2026-10-05 02:40:42\'
+WHERE `matches`.`id` IN (\'2\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2531): CodeIgniter\Database\BaseConnection->query('UPDATE `matches` SET `timeout_b` = :timeout_b:, `updated_at` = :updated_at:
+WHERE `matches`.`id` IN :matches.id:', [...], false)
+ 4 SYSTEMPATH\Model.php(408): CodeIgniter\Database\BaseBuilder->update()
+ 5 SYSTEMPATH\BaseModel.php(1074): CodeIgniter\Model->doUpdate([...], [...])
+ 6 SYSTEMPATH\Model.php(711): CodeIgniter\BaseModel->update([...], [...])
+ 7 APPPATH\Controllers\Scoreboard.php(102): CodeIgniter\Model->update('2', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Scoreboard->update('2')
+ 9 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Scoreboard))
+10 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\futsal-scoreboard\\public\\index.php')
+CRITICAL - 2026-10-05 02:40:42 --> [Caused by] mysqli_sql_exception: Unknown column 'timeout_b' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('UPDATE `matches` SET `timeout_b` = 0, `updated_at` = \'2026-10-05 02:40:42\'
+WHERE `matches`.`id` IN (\'2\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `matches` SET `timeout_b` = 0, `updated_at` = \'2026-10-05 02:40:42\'
+WHERE `matches`.`id` IN (\'2\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `matches` SET `timeout_b` = 0, `updated_at` = \'2026-10-05 02:40:42\'
+WHERE `matches`.`id` IN (\'2\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2531): CodeIgniter\Database\BaseConnection->query('UPDATE `matches` SET `timeout_b` = :timeout_b:, `updated_at` = :updated_at:
+WHERE `matches`.`id` IN :matches.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(408): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(1074): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(711): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\Scoreboard.php(102): CodeIgniter\Model->update('2', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Scoreboard->update('2')
+10 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Scoreboard))
+11 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\futsal-scoreboard\\public\\index.php')
+ERROR - 2026-10-05 02:40:43 --> Unknown column 'timeout_b' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('UPDATE `matches` SET `timeout_b` = 1, `updated_at` = \'2026-10-05 02:40:43\'
+WHERE `matches`.`id` IN (\'2\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `matches` SET `timeout_b` = 1, `updated_at` = \'2026-10-05 02:40:43\'
+WHERE `matches`.`id` IN (\'2\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `matches` SET `timeout_b` = 1, `updated_at` = \'2026-10-05 02:40:43\'
+WHERE `matches`.`id` IN (\'2\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2531): CodeIgniter\Database\BaseConnection->query('UPDATE `matches` SET `timeout_b` = :timeout_b:, `updated_at` = :updated_at:
+WHERE `matches`.`id` IN :matches.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(408): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(1074): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(711): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\Scoreboard.php(102): CodeIgniter\Model->update('2', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Scoreboard->update('2')
+10 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Scoreboard))
+11 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\futsal-scoreboard\\public\\index.php')
+CRITICAL - 2026-10-05 02:40:43 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'timeout_b' in 'field list'
+[Method: POST, Route: scoreboard/update/2]
+in SYSTEMPATH\Database\BaseConnection.php on line 863.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2531): CodeIgniter\Database\BaseConnection->query('UPDATE `matches` SET `timeout_b` = :timeout_b:, `updated_at` = :updated_at:
+WHERE `matches`.`id` IN :matches.id:', [...], false)
+ 2 SYSTEMPATH\Model.php(408): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\BaseModel.php(1074): CodeIgniter\Model->doUpdate([...], [...])
+ 4 SYSTEMPATH\Model.php(711): CodeIgniter\BaseModel->update([...], [...])
+ 5 APPPATH\Controllers\Scoreboard.php(102): CodeIgniter\Model->update('2', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Scoreboard->update('2')
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Scoreboard))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\futsal-scoreboard\\public\\index.php')
+CRITICAL - 2026-10-05 02:40:43 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'timeout_b' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `matches` SET `timeout_b` = 1, `updated_at` = \'2026-10-05 02:40:43\'
+WHERE `matches`.`id` IN (\'2\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `matches` SET `timeout_b` = 1, `updated_at` = \'2026-10-05 02:40:43\'
+WHERE `matches`.`id` IN (\'2\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2531): CodeIgniter\Database\BaseConnection->query('UPDATE `matches` SET `timeout_b` = :timeout_b:, `updated_at` = :updated_at:
+WHERE `matches`.`id` IN :matches.id:', [...], false)
+ 4 SYSTEMPATH\Model.php(408): CodeIgniter\Database\BaseBuilder->update()
+ 5 SYSTEMPATH\BaseModel.php(1074): CodeIgniter\Model->doUpdate([...], [...])
+ 6 SYSTEMPATH\Model.php(711): CodeIgniter\BaseModel->update([...], [...])
+ 7 APPPATH\Controllers\Scoreboard.php(102): CodeIgniter\Model->update('2', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Scoreboard->update('2')
+ 9 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Scoreboard))
+10 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\futsal-scoreboard\\public\\index.php')
+CRITICAL - 2026-10-05 02:40:43 --> [Caused by] mysqli_sql_exception: Unknown column 'timeout_b' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('UPDATE `matches` SET `timeout_b` = 1, `updated_at` = \'2026-10-05 02:40:43\'
+WHERE `matches`.`id` IN (\'2\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `matches` SET `timeout_b` = 1, `updated_at` = \'2026-10-05 02:40:43\'
+WHERE `matches`.`id` IN (\'2\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `matches` SET `timeout_b` = 1, `updated_at` = \'2026-10-05 02:40:43\'
+WHERE `matches`.`id` IN (\'2\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2531): CodeIgniter\Database\BaseConnection->query('UPDATE `matches` SET `timeout_b` = :timeout_b:, `updated_at` = :updated_at:
+WHERE `matches`.`id` IN :matches.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(408): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(1074): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(711): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\Scoreboard.php(102): CodeIgniter\Model->update('2', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Scoreboard->update('2')
+10 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Scoreboard))
+11 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\futsal-scoreboard\\public\\index.php')
+ERROR - 2026-10-05 02:40:44 --> Unknown column 'timeout_b' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('UPDATE `matches` SET `timeout_b` = 0, `updated_at` = \'2026-10-05 02:40:44\'
+WHERE `matches`.`id` IN (\'2\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `matches` SET `timeout_b` = 0, `updated_at` = \'2026-10-05 02:40:44\'
+WHERE `matches`.`id` IN (\'2\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `matches` SET `timeout_b` = 0, `updated_at` = \'2026-10-05 02:40:44\'
+WHERE `matches`.`id` IN (\'2\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2531): CodeIgniter\Database\BaseConnection->query('UPDATE `matches` SET `timeout_b` = :timeout_b:, `updated_at` = :updated_at:
+WHERE `matches`.`id` IN :matches.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(408): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(1074): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(711): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\Scoreboard.php(102): CodeIgniter\Model->update('2', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Scoreboard->update('2')
+10 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Scoreboard))
+11 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\futsal-scoreboard\\public\\index.php')
+CRITICAL - 2026-10-05 02:40:44 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'timeout_b' in 'field list'
+[Method: POST, Route: scoreboard/update/2]
+in SYSTEMPATH\Database\BaseConnection.php on line 863.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2531): CodeIgniter\Database\BaseConnection->query('UPDATE `matches` SET `timeout_b` = :timeout_b:, `updated_at` = :updated_at:
+WHERE `matches`.`id` IN :matches.id:', [...], false)
+ 2 SYSTEMPATH\Model.php(408): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\BaseModel.php(1074): CodeIgniter\Model->doUpdate([...], [...])
+ 4 SYSTEMPATH\Model.php(711): CodeIgniter\BaseModel->update([...], [...])
+ 5 APPPATH\Controllers\Scoreboard.php(102): CodeIgniter\Model->update('2', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Scoreboard->update('2')
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Scoreboard))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\futsal-scoreboard\\public\\index.php')
+CRITICAL - 2026-10-05 02:40:44 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'timeout_b' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `matches` SET `timeout_b` = 0, `updated_at` = \'2026-10-05 02:40:44\'
+WHERE `matches`.`id` IN (\'2\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `matches` SET `timeout_b` = 0, `updated_at` = \'2026-10-05 02:40:44\'
+WHERE `matches`.`id` IN (\'2\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2531): CodeIgniter\Database\BaseConnection->query('UPDATE `matches` SET `timeout_b` = :timeout_b:, `updated_at` = :updated_at:
+WHERE `matches`.`id` IN :matches.id:', [...], false)
+ 4 SYSTEMPATH\Model.php(408): CodeIgniter\Database\BaseBuilder->update()
+ 5 SYSTEMPATH\BaseModel.php(1074): CodeIgniter\Model->doUpdate([...], [...])
+ 6 SYSTEMPATH\Model.php(711): CodeIgniter\BaseModel->update([...], [...])
+ 7 APPPATH\Controllers\Scoreboard.php(102): CodeIgniter\Model->update('2', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Scoreboard->update('2')
+ 9 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Scoreboard))
+10 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\futsal-scoreboard\\public\\index.php')
+CRITICAL - 2026-10-05 02:40:44 --> [Caused by] mysqli_sql_exception: Unknown column 'timeout_b' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('UPDATE `matches` SET `timeout_b` = 0, `updated_at` = \'2026-10-05 02:40:44\'
+WHERE `matches`.`id` IN (\'2\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `matches` SET `timeout_b` = 0, `updated_at` = \'2026-10-05 02:40:44\'
+WHERE `matches`.`id` IN (\'2\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `matches` SET `timeout_b` = 0, `updated_at` = \'2026-10-05 02:40:44\'
+WHERE `matches`.`id` IN (\'2\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2531): CodeIgniter\Database\BaseConnection->query('UPDATE `matches` SET `timeout_b` = :timeout_b:, `updated_at` = :updated_at:
+WHERE `matches`.`id` IN :matches.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(408): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(1074): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(711): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\Scoreboard.php(102): CodeIgniter\Model->update('2', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Scoreboard->update('2')
+10 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Scoreboard))
+11 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\futsal-scoreboard\\public\\index.php')
+ERROR - 2026-10-05 02:40:46 --> Unknown column 'timeout_a' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('UPDATE `matches` SET `timeout_a` = 1, `updated_at` = \'2026-10-05 02:40:46\'
+WHERE `matches`.`id` IN (\'2\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `matches` SET `timeout_a` = 1, `updated_at` = \'2026-10-05 02:40:46\'
+WHERE `matches`.`id` IN (\'2\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `matches` SET `timeout_a` = 1, `updated_at` = \'2026-10-05 02:40:46\'
+WHERE `matches`.`id` IN (\'2\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2531): CodeIgniter\Database\BaseConnection->query('UPDATE `matches` SET `timeout_a` = :timeout_a:, `updated_at` = :updated_at:
+WHERE `matches`.`id` IN :matches.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(408): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(1074): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(711): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\Scoreboard.php(102): CodeIgniter\Model->update('2', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Scoreboard->update('2')
+10 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Scoreboard))
+11 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\futsal-scoreboard\\public\\index.php')
+CRITICAL - 2026-10-05 02:40:46 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'timeout_a' in 'field list'
+[Method: POST, Route: scoreboard/update/2]
+in SYSTEMPATH\Database\BaseConnection.php on line 863.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2531): CodeIgniter\Database\BaseConnection->query('UPDATE `matches` SET `timeout_a` = :timeout_a:, `updated_at` = :updated_at:
+WHERE `matches`.`id` IN :matches.id:', [...], false)
+ 2 SYSTEMPATH\Model.php(408): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\BaseModel.php(1074): CodeIgniter\Model->doUpdate([...], [...])
+ 4 SYSTEMPATH\Model.php(711): CodeIgniter\BaseModel->update([...], [...])
+ 5 APPPATH\Controllers\Scoreboard.php(102): CodeIgniter\Model->update('2', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Scoreboard->update('2')
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Scoreboard))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\futsal-scoreboard\\public\\index.php')
+CRITICAL - 2026-10-05 02:40:46 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'timeout_a' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `matches` SET `timeout_a` = 1, `updated_at` = \'2026-10-05 02:40:46\'
+WHERE `matches`.`id` IN (\'2\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `matches` SET `timeout_a` = 1, `updated_at` = \'2026-10-05 02:40:46\'
+WHERE `matches`.`id` IN (\'2\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2531): CodeIgniter\Database\BaseConnection->query('UPDATE `matches` SET `timeout_a` = :timeout_a:, `updated_at` = :updated_at:
+WHERE `matches`.`id` IN :matches.id:', [...], false)
+ 4 SYSTEMPATH\Model.php(408): CodeIgniter\Database\BaseBuilder->update()
+ 5 SYSTEMPATH\BaseModel.php(1074): CodeIgniter\Model->doUpdate([...], [...])
+ 6 SYSTEMPATH\Model.php(711): CodeIgniter\BaseModel->update([...], [...])
+ 7 APPPATH\Controllers\Scoreboard.php(102): CodeIgniter\Model->update('2', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Scoreboard->update('2')
+ 9 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Scoreboard))
+10 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\futsal-scoreboard\\public\\index.php')
+CRITICAL - 2026-10-05 02:40:46 --> [Caused by] mysqli_sql_exception: Unknown column 'timeout_a' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('UPDATE `matches` SET `timeout_a` = 1, `updated_at` = \'2026-10-05 02:40:46\'
+WHERE `matches`.`id` IN (\'2\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `matches` SET `timeout_a` = 1, `updated_at` = \'2026-10-05 02:40:46\'
+WHERE `matches`.`id` IN (\'2\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `matches` SET `timeout_a` = 1, `updated_at` = \'2026-10-05 02:40:46\'
+WHERE `matches`.`id` IN (\'2\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2531): CodeIgniter\Database\BaseConnection->query('UPDATE `matches` SET `timeout_a` = :timeout_a:, `updated_at` = :updated_at:
+WHERE `matches`.`id` IN :matches.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(408): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(1074): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(711): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\Scoreboard.php(102): CodeIgniter\Model->update('2', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Scoreboard->update('2')
+10 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Scoreboard))
+11 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\futsal-scoreboard\\public\\index.php')
+ERROR - 2026-10-05 02:40:48 --> Unknown column 'timeout_a' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('UPDATE `matches` SET `timeout_a` = 0, `updated_at` = \'2026-10-05 02:40:48\'
+WHERE `matches`.`id` IN (\'2\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `matches` SET `timeout_a` = 0, `updated_at` = \'2026-10-05 02:40:48\'
+WHERE `matches`.`id` IN (\'2\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `matches` SET `timeout_a` = 0, `updated_at` = \'2026-10-05 02:40:48\'
+WHERE `matches`.`id` IN (\'2\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2531): CodeIgniter\Database\BaseConnection->query('UPDATE `matches` SET `timeout_a` = :timeout_a:, `updated_at` = :updated_at:
+WHERE `matches`.`id` IN :matches.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(408): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(1074): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(711): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\Scoreboard.php(102): CodeIgniter\Model->update('2', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Scoreboard->update('2')
+10 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Scoreboard))
+11 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\futsal-scoreboard\\public\\index.php')
+CRITICAL - 2026-10-05 02:40:48 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'timeout_a' in 'field list'
+[Method: POST, Route: scoreboard/update/2]
+in SYSTEMPATH\Database\BaseConnection.php on line 863.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2531): CodeIgniter\Database\BaseConnection->query('UPDATE `matches` SET `timeout_a` = :timeout_a:, `updated_at` = :updated_at:
+WHERE `matches`.`id` IN :matches.id:', [...], false)
+ 2 SYSTEMPATH\Model.php(408): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\BaseModel.php(1074): CodeIgniter\Model->doUpdate([...], [...])
+ 4 SYSTEMPATH\Model.php(711): CodeIgniter\BaseModel->update([...], [...])
+ 5 APPPATH\Controllers\Scoreboard.php(102): CodeIgniter\Model->update('2', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Scoreboard->update('2')
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Scoreboard))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\futsal-scoreboard\\public\\index.php')
+CRITICAL - 2026-10-05 02:40:48 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'timeout_a' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `matches` SET `timeout_a` = 0, `updated_at` = \'2026-10-05 02:40:48\'
+WHERE `matches`.`id` IN (\'2\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `matches` SET `timeout_a` = 0, `updated_at` = \'2026-10-05 02:40:48\'
+WHERE `matches`.`id` IN (\'2\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2531): CodeIgniter\Database\BaseConnection->query('UPDATE `matches` SET `timeout_a` = :timeout_a:, `updated_at` = :updated_at:
+WHERE `matches`.`id` IN :matches.id:', [...], false)
+ 4 SYSTEMPATH\Model.php(408): CodeIgniter\Database\BaseBuilder->update()
+ 5 SYSTEMPATH\BaseModel.php(1074): CodeIgniter\Model->doUpdate([...], [...])
+ 6 SYSTEMPATH\Model.php(711): CodeIgniter\BaseModel->update([...], [...])
+ 7 APPPATH\Controllers\Scoreboard.php(102): CodeIgniter\Model->update('2', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Scoreboard->update('2')
+ 9 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Scoreboard))
+10 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\futsal-scoreboard\\public\\index.php')
+CRITICAL - 2026-10-05 02:40:48 --> [Caused by] mysqli_sql_exception: Unknown column 'timeout_a' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('UPDATE `matches` SET `timeout_a` = 0, `updated_at` = \'2026-10-05 02:40:48\'
+WHERE `matches`.`id` IN (\'2\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `matches` SET `timeout_a` = 0, `updated_at` = \'2026-10-05 02:40:48\'
+WHERE `matches`.`id` IN (\'2\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `matches` SET `timeout_a` = 0, `updated_at` = \'2026-10-05 02:40:48\'
+WHERE `matches`.`id` IN (\'2\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2531): CodeIgniter\Database\BaseConnection->query('UPDATE `matches` SET `timeout_a` = :timeout_a:, `updated_at` = :updated_at:
+WHERE `matches`.`id` IN :matches.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(408): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(1074): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(711): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\Scoreboard.php(102): CodeIgniter\Model->update('2', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Scoreboard->update('2')
+10 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Scoreboard))
+11 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\futsal-scoreboard\\public\\index.php')
+ERROR - 2026-10-05 02:40:50 --> Unknown column 'timeout_a' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('UPDATE `matches` SET `timeout_a` = 1, `updated_at` = \'2026-10-05 02:40:50\'
+WHERE `matches`.`id` IN (\'2\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `matches` SET `timeout_a` = 1, `updated_at` = \'2026-10-05 02:40:50\'
+WHERE `matches`.`id` IN (\'2\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `matches` SET `timeout_a` = 1, `updated_at` = \'2026-10-05 02:40:50\'
+WHERE `matches`.`id` IN (\'2\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2531): CodeIgniter\Database\BaseConnection->query('UPDATE `matches` SET `timeout_a` = :timeout_a:, `updated_at` = :updated_at:
+WHERE `matches`.`id` IN :matches.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(408): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(1074): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(711): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\Scoreboard.php(102): CodeIgniter\Model->update('2', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Scoreboard->update('2')
+10 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Scoreboard))
+11 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\futsal-scoreboard\\public\\index.php')
+CRITICAL - 2026-10-05 02:40:50 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'timeout_a' in 'field list'
+[Method: POST, Route: scoreboard/update/2]
+in SYSTEMPATH\Database\BaseConnection.php on line 863.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2531): CodeIgniter\Database\BaseConnection->query('UPDATE `matches` SET `timeout_a` = :timeout_a:, `updated_at` = :updated_at:
+WHERE `matches`.`id` IN :matches.id:', [...], false)
+ 2 SYSTEMPATH\Model.php(408): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\BaseModel.php(1074): CodeIgniter\Model->doUpdate([...], [...])
+ 4 SYSTEMPATH\Model.php(711): CodeIgniter\BaseModel->update([...], [...])
+ 5 APPPATH\Controllers\Scoreboard.php(102): CodeIgniter\Model->update('2', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Scoreboard->update('2')
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Scoreboard))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\futsal-scoreboard\\public\\index.php')
+CRITICAL - 2026-10-05 02:40:50 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'timeout_a' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `matches` SET `timeout_a` = 1, `updated_at` = \'2026-10-05 02:40:50\'
+WHERE `matches`.`id` IN (\'2\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `matches` SET `timeout_a` = 1, `updated_at` = \'2026-10-05 02:40:50\'
+WHERE `matches`.`id` IN (\'2\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2531): CodeIgniter\Database\BaseConnection->query('UPDATE `matches` SET `timeout_a` = :timeout_a:, `updated_at` = :updated_at:
+WHERE `matches`.`id` IN :matches.id:', [...], false)
+ 4 SYSTEMPATH\Model.php(408): CodeIgniter\Database\BaseBuilder->update()
+ 5 SYSTEMPATH\BaseModel.php(1074): CodeIgniter\Model->doUpdate([...], [...])
+ 6 SYSTEMPATH\Model.php(711): CodeIgniter\BaseModel->update([...], [...])
+ 7 APPPATH\Controllers\Scoreboard.php(102): CodeIgniter\Model->update('2', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Scoreboard->update('2')
+ 9 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Scoreboard))
+10 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\futsal-scoreboard\\public\\index.php')
+CRITICAL - 2026-10-05 02:40:50 --> [Caused by] mysqli_sql_exception: Unknown column 'timeout_a' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('UPDATE `matches` SET `timeout_a` = 1, `updated_at` = \'2026-10-05 02:40:50\'
+WHERE `matches`.`id` IN (\'2\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `matches` SET `timeout_a` = 1, `updated_at` = \'2026-10-05 02:40:50\'
+WHERE `matches`.`id` IN (\'2\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `matches` SET `timeout_a` = 1, `updated_at` = \'2026-10-05 02:40:50\'
+WHERE `matches`.`id` IN (\'2\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2531): CodeIgniter\Database\BaseConnection->query('UPDATE `matches` SET `timeout_a` = :timeout_a:, `updated_at` = :updated_at:
+WHERE `matches`.`id` IN :matches.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(408): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(1074): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(711): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\Scoreboard.php(102): CodeIgniter\Model->update('2', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Scoreboard->update('2')
+10 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Scoreboard))
+11 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\futsal-scoreboard\\public\\index.php')
+ERROR - 2026-10-05 02:40:52 --> Unknown column 'timeout_a' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('UPDATE `matches` SET `timeout_a` = 0, `updated_at` = \'2026-10-05 02:40:52\'
+WHERE `matches`.`id` IN (\'2\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `matches` SET `timeout_a` = 0, `updated_at` = \'2026-10-05 02:40:52\'
+WHERE `matches`.`id` IN (\'2\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `matches` SET `timeout_a` = 0, `updated_at` = \'2026-10-05 02:40:52\'
+WHERE `matches`.`id` IN (\'2\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2531): CodeIgniter\Database\BaseConnection->query('UPDATE `matches` SET `timeout_a` = :timeout_a:, `updated_at` = :updated_at:
+WHERE `matches`.`id` IN :matches.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(408): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(1074): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(711): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\Scoreboard.php(102): CodeIgniter\Model->update('2', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Scoreboard->update('2')
+10 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Scoreboard))
+11 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\futsal-scoreboard\\public\\index.php')
+CRITICAL - 2026-10-05 02:40:52 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'timeout_a' in 'field list'
+[Method: POST, Route: scoreboard/update/2]
+in SYSTEMPATH\Database\BaseConnection.php on line 863.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2531): CodeIgniter\Database\BaseConnection->query('UPDATE `matches` SET `timeout_a` = :timeout_a:, `updated_at` = :updated_at:
+WHERE `matches`.`id` IN :matches.id:', [...], false)
+ 2 SYSTEMPATH\Model.php(408): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\BaseModel.php(1074): CodeIgniter\Model->doUpdate([...], [...])
+ 4 SYSTEMPATH\Model.php(711): CodeIgniter\BaseModel->update([...], [...])
+ 5 APPPATH\Controllers\Scoreboard.php(102): CodeIgniter\Model->update('2', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Scoreboard->update('2')
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Scoreboard))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\futsal-scoreboard\\public\\index.php')
+CRITICAL - 2026-10-05 02:40:52 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'timeout_a' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `matches` SET `timeout_a` = 0, `updated_at` = \'2026-10-05 02:40:52\'
+WHERE `matches`.`id` IN (\'2\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `matches` SET `timeout_a` = 0, `updated_at` = \'2026-10-05 02:40:52\'
+WHERE `matches`.`id` IN (\'2\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2531): CodeIgniter\Database\BaseConnection->query('UPDATE `matches` SET `timeout_a` = :timeout_a:, `updated_at` = :updated_at:
+WHERE `matches`.`id` IN :matches.id:', [...], false)
+ 4 SYSTEMPATH\Model.php(408): CodeIgniter\Database\BaseBuilder->update()
+ 5 SYSTEMPATH\BaseModel.php(1074): CodeIgniter\Model->doUpdate([...], [...])
+ 6 SYSTEMPATH\Model.php(711): CodeIgniter\BaseModel->update([...], [...])
+ 7 APPPATH\Controllers\Scoreboard.php(102): CodeIgniter\Model->update('2', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Scoreboard->update('2')
+ 9 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Scoreboard))
+10 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\futsal-scoreboard\\public\\index.php')
+CRITICAL - 2026-10-05 02:40:52 --> [Caused by] mysqli_sql_exception: Unknown column 'timeout_a' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('UPDATE `matches` SET `timeout_a` = 0, `updated_at` = \'2026-10-05 02:40:52\'
+WHERE `matches`.`id` IN (\'2\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `matches` SET `timeout_a` = 0, `updated_at` = \'2026-10-05 02:40:52\'
+WHERE `matches`.`id` IN (\'2\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `matches` SET `timeout_a` = 0, `updated_at` = \'2026-10-05 02:40:52\'
+WHERE `matches`.`id` IN (\'2\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2531): CodeIgniter\Database\BaseConnection->query('UPDATE `matches` SET `timeout_a` = :timeout_a:, `updated_at` = :updated_at:
+WHERE `matches`.`id` IN :matches.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(408): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(1074): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(711): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\Scoreboard.php(102): CodeIgniter\Model->update('2', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Scoreboard->update('2')
+10 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Scoreboard))
+11 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\futsal-scoreboard\\public\\index.php')
+ERROR - 2026-10-05 02:41:14 --> Unknown column 'time_left' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('UPDATE `matches` SET `time_left` = 1195, `updated_at` = \'2026-10-05 02:41:14\'
+WHERE `matches`.`id` IN (\'2\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `matches` SET `time_left` = 1195, `updated_at` = \'2026-10-05 02:41:14\'
+WHERE `matches`.`id` IN (\'2\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `matches` SET `time_left` = 1195, `updated_at` = \'2026-10-05 02:41:14\'
+WHERE `matches`.`id` IN (\'2\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2531): CodeIgniter\Database\BaseConnection->query('UPDATE `matches` SET `time_left` = :time_left:, `updated_at` = :updated_at:
+WHERE `matches`.`id` IN :matches.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(408): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(1074): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(711): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\Scoreboard.php(102): CodeIgniter\Model->update('2', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Scoreboard->update('2')
+10 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Scoreboard))
+11 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\futsal-scoreboard\\public\\index.php')
+CRITICAL - 2026-10-05 02:41:14 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'time_left' in 'field list'
+[Method: POST, Route: scoreboard/update/2]
+in SYSTEMPATH\Database\BaseConnection.php on line 863.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2531): CodeIgniter\Database\BaseConnection->query('UPDATE `matches` SET `time_left` = :time_left:, `updated_at` = :updated_at:
+WHERE `matches`.`id` IN :matches.id:', [...], false)
+ 2 SYSTEMPATH\Model.php(408): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\BaseModel.php(1074): CodeIgniter\Model->doUpdate([...], [...])
+ 4 SYSTEMPATH\Model.php(711): CodeIgniter\BaseModel->update([...], [...])
+ 5 APPPATH\Controllers\Scoreboard.php(102): CodeIgniter\Model->update('2', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Scoreboard->update('2')
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Scoreboard))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\futsal-scoreboard\\public\\index.php')
+CRITICAL - 2026-10-05 02:41:14 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'time_left' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `matches` SET `time_left` = 1195, `updated_at` = \'2026-10-05 02:41:14\'
+WHERE `matches`.`id` IN (\'2\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `matches` SET `time_left` = 1195, `updated_at` = \'2026-10-05 02:41:14\'
+WHERE `matches`.`id` IN (\'2\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2531): CodeIgniter\Database\BaseConnection->query('UPDATE `matches` SET `time_left` = :time_left:, `updated_at` = :updated_at:
+WHERE `matches`.`id` IN :matches.id:', [...], false)
+ 4 SYSTEMPATH\Model.php(408): CodeIgniter\Database\BaseBuilder->update()
+ 5 SYSTEMPATH\BaseModel.php(1074): CodeIgniter\Model->doUpdate([...], [...])
+ 6 SYSTEMPATH\Model.php(711): CodeIgniter\BaseModel->update([...], [...])
+ 7 APPPATH\Controllers\Scoreboard.php(102): CodeIgniter\Model->update('2', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Scoreboard->update('2')
+ 9 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Scoreboard))
+10 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\futsal-scoreboard\\public\\index.php')
+CRITICAL - 2026-10-05 02:41:14 --> [Caused by] mysqli_sql_exception: Unknown column 'time_left' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('UPDATE `matches` SET `time_left` = 1195, `updated_at` = \'2026-10-05 02:41:14\'
+WHERE `matches`.`id` IN (\'2\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `matches` SET `time_left` = 1195, `updated_at` = \'2026-10-05 02:41:14\'
+WHERE `matches`.`id` IN (\'2\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `matches` SET `time_left` = 1195, `updated_at` = \'2026-10-05 02:41:14\'
+WHERE `matches`.`id` IN (\'2\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2531): CodeIgniter\Database\BaseConnection->query('UPDATE `matches` SET `time_left` = :time_left:, `updated_at` = :updated_at:
+WHERE `matches`.`id` IN :matches.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(408): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(1074): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(711): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\Scoreboard.php(102): CodeIgniter\Model->update('2', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Scoreboard->update('2')
+10 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Scoreboard))
+11 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\futsal-scoreboard\\public\\index.php')
+ERROR - 2026-10-05 02:41:16 --> Unknown column 'time_left' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('UPDATE `matches` SET `time_left` = 1194, `updated_at` = \'2026-10-05 02:41:16\'
+WHERE `matches`.`id` IN (\'2\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `matches` SET `time_left` = 1194, `updated_at` = \'2026-10-05 02:41:16\'
+WHERE `matches`.`id` IN (\'2\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `matches` SET `time_left` = 1194, `updated_at` = \'2026-10-05 02:41:16\'
+WHERE `matches`.`id` IN (\'2\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2531): CodeIgniter\Database\BaseConnection->query('UPDATE `matches` SET `time_left` = :time_left:, `updated_at` = :updated_at:
+WHERE `matches`.`id` IN :matches.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(408): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(1074): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(711): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\Scoreboard.php(102): CodeIgniter\Model->update('2', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Scoreboard->update('2')
+10 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Scoreboard))
+11 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\futsal-scoreboard\\public\\index.php')
+CRITICAL - 2026-10-05 02:41:16 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'time_left' in 'field list'
+[Method: POST, Route: scoreboard/update/2]
+in SYSTEMPATH\Database\BaseConnection.php on line 863.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2531): CodeIgniter\Database\BaseConnection->query('UPDATE `matches` SET `time_left` = :time_left:, `updated_at` = :updated_at:
+WHERE `matches`.`id` IN :matches.id:', [...], false)
+ 2 SYSTEMPATH\Model.php(408): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\BaseModel.php(1074): CodeIgniter\Model->doUpdate([...], [...])
+ 4 SYSTEMPATH\Model.php(711): CodeIgniter\BaseModel->update([...], [...])
+ 5 APPPATH\Controllers\Scoreboard.php(102): CodeIgniter\Model->update('2', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Scoreboard->update('2')
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Scoreboard))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\futsal-scoreboard\\public\\index.php')
+CRITICAL - 2026-10-05 02:41:16 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'time_left' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `matches` SET `time_left` = 1194, `updated_at` = \'2026-10-05 02:41:16\'
+WHERE `matches`.`id` IN (\'2\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `matches` SET `time_left` = 1194, `updated_at` = \'2026-10-05 02:41:16\'
+WHERE `matches`.`id` IN (\'2\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2531): CodeIgniter\Database\BaseConnection->query('UPDATE `matches` SET `time_left` = :time_left:, `updated_at` = :updated_at:
+WHERE `matches`.`id` IN :matches.id:', [...], false)
+ 4 SYSTEMPATH\Model.php(408): CodeIgniter\Database\BaseBuilder->update()
+ 5 SYSTEMPATH\BaseModel.php(1074): CodeIgniter\Model->doUpdate([...], [...])
+ 6 SYSTEMPATH\Model.php(711): CodeIgniter\BaseModel->update([...], [...])
+ 7 APPPATH\Controllers\Scoreboard.php(102): CodeIgniter\Model->update('2', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Scoreboard->update('2')
+ 9 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Scoreboard))
+10 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\futsal-scoreboard\\public\\index.php')
+CRITICAL - 2026-10-05 02:41:16 --> [Caused by] mysqli_sql_exception: Unknown column 'time_left' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('UPDATE `matches` SET `time_left` = 1194, `updated_at` = \'2026-10-05 02:41:16\'
+WHERE `matches`.`id` IN (\'2\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `matches` SET `time_left` = 1194, `updated_at` = \'2026-10-05 02:41:16\'
+WHERE `matches`.`id` IN (\'2\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `matches` SET `time_left` = 1194, `updated_at` = \'2026-10-05 02:41:16\'
+WHERE `matches`.`id` IN (\'2\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2531): CodeIgniter\Database\BaseConnection->query('UPDATE `matches` SET `time_left` = :time_left:, `updated_at` = :updated_at:
+WHERE `matches`.`id` IN :matches.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(408): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(1074): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(711): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\Scoreboard.php(102): CodeIgniter\Model->update('2', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Scoreboard->update('2')
+10 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Scoreboard))
+11 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\futsal-scoreboard\\public\\index.php')
+ERROR - 2026-10-05 02:41:21 --> Unknown column 'fouls_a' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('UPDATE `matches` SET `fouls_a` = 0, `fouls_b` = 0, `time_left` = 1200, `timeout_a` = 0, `timeout_b` = 0, `period` = 2, `updated_at` = \'2026-10-05 02:41:21\'
+WHERE `matches`.`id` IN (\'2\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `matches` SET `fouls_a` = 0, `fouls_b` = 0, `time_left` = 1200, `timeout_a` = 0, `timeout_b` = 0, `period` = 2, `updated_at` = \'2026-10-05 02:41:21\'
+WHERE `matches`.`id` IN (\'2\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `matches` SET `fouls_a` = 0, `fouls_b` = 0, `time_left` = 1200, `timeout_a` = 0, `timeout_b` = 0, `period` = 2, `updated_at` = \'2026-10-05 02:41:21\'
+WHERE `matches`.`id` IN (\'2\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2531): CodeIgniter\Database\BaseConnection->query('UPDATE `matches` SET `fouls_a` = :fouls_a:, `fouls_b` = :fouls_b:, `time_left` = :time_left:, `timeout_a` = :timeout_a:, `timeout_b` = :timeout_b:, `period` = :period:, `updated_at` = :updated_at:
+WHERE `matches`.`id` IN :matches.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(408): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(1074): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(711): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\Scoreboard.php(102): CodeIgniter\Model->update('2', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Scoreboard->update('2')
+10 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Scoreboard))
+11 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\futsal-scoreboard\\public\\index.php')
+CRITICAL - 2026-10-05 02:41:21 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'fouls_a' in 'field list'
+[Method: POST, Route: scoreboard/update/2]
+in SYSTEMPATH\Database\BaseConnection.php on line 863.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2531): CodeIgniter\Database\BaseConnection->query('UPDATE `matches` SET `fouls_a` = :fouls_a:, `fouls_b` = :fouls_b:, `time_left` = :time_left:, `timeout_a` = :timeout_a:, `timeout_b` = :timeout_b:, `period` = :period:, `updated_at` = :updated_at:
+WHERE `matches`.`id` IN :matches.id:', [...], false)
+ 2 SYSTEMPATH\Model.php(408): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\BaseModel.php(1074): CodeIgniter\Model->doUpdate([...], [...])
+ 4 SYSTEMPATH\Model.php(711): CodeIgniter\BaseModel->update([...], [...])
+ 5 APPPATH\Controllers\Scoreboard.php(102): CodeIgniter\Model->update('2', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Scoreboard->update('2')
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Scoreboard))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\futsal-scoreboard\\public\\index.php')
+CRITICAL - 2026-10-05 02:41:21 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'fouls_a' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `matches` SET `fouls_a` = 0, `fouls_b` = 0, `time_left` = 1200, `timeout_a` = 0, `timeout_b` = 0, `period` = 2, `updated_at` = \'2026-10-05 02:41:21\'
+WHERE `matches`.`id` IN (\'2\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `matches` SET `fouls_a` = 0, `fouls_b` = 0, `time_left` = 1200, `timeout_a` = 0, `timeout_b` = 0, `period` = 2, `updated_at` = \'2026-10-05 02:41:21\'
+WHERE `matches`.`id` IN (\'2\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2531): CodeIgniter\Database\BaseConnection->query('UPDATE `matches` SET `fouls_a` = :fouls_a:, `fouls_b` = :fouls_b:, `time_left` = :time_left:, `timeout_a` = :timeout_a:, `timeout_b` = :timeout_b:, `period` = :period:, `updated_at` = :updated_at:
+WHERE `matches`.`id` IN :matches.id:', [...], false)
+ 4 SYSTEMPATH\Model.php(408): CodeIgniter\Database\BaseBuilder->update()
+ 5 SYSTEMPATH\BaseModel.php(1074): CodeIgniter\Model->doUpdate([...], [...])
+ 6 SYSTEMPATH\Model.php(711): CodeIgniter\BaseModel->update([...], [...])
+ 7 APPPATH\Controllers\Scoreboard.php(102): CodeIgniter\Model->update('2', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Scoreboard->update('2')
+ 9 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Scoreboard))
+10 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\futsal-scoreboard\\public\\index.php')
+CRITICAL - 2026-10-05 02:41:21 --> [Caused by] mysqli_sql_exception: Unknown column 'fouls_a' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('UPDATE `matches` SET `fouls_a` = 0, `fouls_b` = 0, `time_left` = 1200, `timeout_a` = 0, `timeout_b` = 0, `period` = 2, `updated_at` = \'2026-10-05 02:41:21\'
+WHERE `matches`.`id` IN (\'2\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `matches` SET `fouls_a` = 0, `fouls_b` = 0, `time_left` = 1200, `timeout_a` = 0, `timeout_b` = 0, `period` = 2, `updated_at` = \'2026-10-05 02:41:21\'
+WHERE `matches`.`id` IN (\'2\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `matches` SET `fouls_a` = 0, `fouls_b` = 0, `time_left` = 1200, `timeout_a` = 0, `timeout_b` = 0, `period` = 2, `updated_at` = \'2026-10-05 02:41:21\'
+WHERE `matches`.`id` IN (\'2\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2531): CodeIgniter\Database\BaseConnection->query('UPDATE `matches` SET `fouls_a` = :fouls_a:, `fouls_b` = :fouls_b:, `time_left` = :time_left:, `timeout_a` = :timeout_a:, `timeout_b` = :timeout_b:, `period` = :period:, `updated_at` = :updated_at:
+WHERE `matches`.`id` IN :matches.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(408): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(1074): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(711): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\Scoreboard.php(102): CodeIgniter\Model->update('2', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Scoreboard->update('2')
+10 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Scoreboard))
+11 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\futsal-scoreboard\\public\\index.php')
+DEBUG - 2026-10-05 02:41:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-10-05 02:42:25 --> Unknown column 'fouls_a' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('UPDATE `matches` SET `fouls_a` = 1, `updated_at` = \'2026-10-05 02:42:25\'
+WHERE `matches`.`id` IN (\'2\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `matches` SET `fouls_a` = 1, `updated_at` = \'2026-10-05 02:42:25\'
+WHERE `matches`.`id` IN (\'2\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `matches` SET `fouls_a` = 1, `updated_at` = \'2026-10-05 02:42:25\'
+WHERE `matches`.`id` IN (\'2\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2531): CodeIgniter\Database\BaseConnection->query('UPDATE `matches` SET `fouls_a` = :fouls_a:, `updated_at` = :updated_at:
+WHERE `matches`.`id` IN :matches.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(408): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(1074): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(711): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\Scoreboard.php(102): CodeIgniter\Model->update('2', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Scoreboard->update('2')
+10 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Scoreboard))
+11 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\futsal-scoreboard\\public\\index.php')
+CRITICAL - 2026-10-05 02:42:25 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'fouls_a' in 'field list'
+[Method: POST, Route: scoreboard/update/2]
+in SYSTEMPATH\Database\BaseConnection.php on line 863.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2531): CodeIgniter\Database\BaseConnection->query('UPDATE `matches` SET `fouls_a` = :fouls_a:, `updated_at` = :updated_at:
+WHERE `matches`.`id` IN :matches.id:', [...], false)
+ 2 SYSTEMPATH\Model.php(408): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\BaseModel.php(1074): CodeIgniter\Model->doUpdate([...], [...])
+ 4 SYSTEMPATH\Model.php(711): CodeIgniter\BaseModel->update([...], [...])
+ 5 APPPATH\Controllers\Scoreboard.php(102): CodeIgniter\Model->update('2', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Scoreboard->update('2')
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Scoreboard))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\futsal-scoreboard\\public\\index.php')
+CRITICAL - 2026-10-05 02:42:25 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'fouls_a' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `matches` SET `fouls_a` = 1, `updated_at` = \'2026-10-05 02:42:25\'
+WHERE `matches`.`id` IN (\'2\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `matches` SET `fouls_a` = 1, `updated_at` = \'2026-10-05 02:42:25\'
+WHERE `matches`.`id` IN (\'2\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2531): CodeIgniter\Database\BaseConnection->query('UPDATE `matches` SET `fouls_a` = :fouls_a:, `updated_at` = :updated_at:
+WHERE `matches`.`id` IN :matches.id:', [...], false)
+ 4 SYSTEMPATH\Model.php(408): CodeIgniter\Database\BaseBuilder->update()
+ 5 SYSTEMPATH\BaseModel.php(1074): CodeIgniter\Model->doUpdate([...], [...])
+ 6 SYSTEMPATH\Model.php(711): CodeIgniter\BaseModel->update([...], [...])
+ 7 APPPATH\Controllers\Scoreboard.php(102): CodeIgniter\Model->update('2', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Scoreboard->update('2')
+ 9 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Scoreboard))
+10 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\futsal-scoreboard\\public\\index.php')
+CRITICAL - 2026-10-05 02:42:25 --> [Caused by] mysqli_sql_exception: Unknown column 'fouls_a' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('UPDATE `matches` SET `fouls_a` = 1, `updated_at` = \'2026-10-05 02:42:25\'
+WHERE `matches`.`id` IN (\'2\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `matches` SET `fouls_a` = 1, `updated_at` = \'2026-10-05 02:42:25\'
+WHERE `matches`.`id` IN (\'2\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `matches` SET `fouls_a` = 1, `updated_at` = \'2026-10-05 02:42:25\'
+WHERE `matches`.`id` IN (\'2\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2531): CodeIgniter\Database\BaseConnection->query('UPDATE `matches` SET `fouls_a` = :fouls_a:, `updated_at` = :updated_at:
+WHERE `matches`.`id` IN :matches.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(408): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(1074): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(711): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\Scoreboard.php(102): CodeIgniter\Model->update('2', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Scoreboard->update('2')
+10 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Scoreboard))
+11 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\futsal-scoreboard\\public\\index.php')
+ERROR - 2026-10-05 02:42:27 --> Unknown column 'fouls_a' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('UPDATE `matches` SET `fouls_a` = 2, `updated_at` = \'2026-10-05 02:42:27\'
+WHERE `matches`.`id` IN (\'2\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `matches` SET `fouls_a` = 2, `updated_at` = \'2026-10-05 02:42:27\'
+WHERE `matches`.`id` IN (\'2\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `matches` SET `fouls_a` = 2, `updated_at` = \'2026-10-05 02:42:27\'
+WHERE `matches`.`id` IN (\'2\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2531): CodeIgniter\Database\BaseConnection->query('UPDATE `matches` SET `fouls_a` = :fouls_a:, `updated_at` = :updated_at:
+WHERE `matches`.`id` IN :matches.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(408): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(1074): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(711): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\Scoreboard.php(102): CodeIgniter\Model->update('2', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Scoreboard->update('2')
+10 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Scoreboard))
+11 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\futsal-scoreboard\\public\\index.php')
+CRITICAL - 2026-10-05 02:42:27 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'fouls_a' in 'field list'
+[Method: POST, Route: scoreboard/update/2]
+in SYSTEMPATH\Database\BaseConnection.php on line 863.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2531): CodeIgniter\Database\BaseConnection->query('UPDATE `matches` SET `fouls_a` = :fouls_a:, `updated_at` = :updated_at:
+WHERE `matches`.`id` IN :matches.id:', [...], false)
+ 2 SYSTEMPATH\Model.php(408): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\BaseModel.php(1074): CodeIgniter\Model->doUpdate([...], [...])
+ 4 SYSTEMPATH\Model.php(711): CodeIgniter\BaseModel->update([...], [...])
+ 5 APPPATH\Controllers\Scoreboard.php(102): CodeIgniter\Model->update('2', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Scoreboard->update('2')
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Scoreboard))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\futsal-scoreboard\\public\\index.php')
+CRITICAL - 2026-10-05 02:42:27 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'fouls_a' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `matches` SET `fouls_a` = 2, `updated_at` = \'2026-10-05 02:42:27\'
+WHERE `matches`.`id` IN (\'2\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `matches` SET `fouls_a` = 2, `updated_at` = \'2026-10-05 02:42:27\'
+WHERE `matches`.`id` IN (\'2\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2531): CodeIgniter\Database\BaseConnection->query('UPDATE `matches` SET `fouls_a` = :fouls_a:, `updated_at` = :updated_at:
+WHERE `matches`.`id` IN :matches.id:', [...], false)
+ 4 SYSTEMPATH\Model.php(408): CodeIgniter\Database\BaseBuilder->update()
+ 5 SYSTEMPATH\BaseModel.php(1074): CodeIgniter\Model->doUpdate([...], [...])
+ 6 SYSTEMPATH\Model.php(711): CodeIgniter\BaseModel->update([...], [...])
+ 7 APPPATH\Controllers\Scoreboard.php(102): CodeIgniter\Model->update('2', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Scoreboard->update('2')
+ 9 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Scoreboard))
+10 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\futsal-scoreboard\\public\\index.php')
+CRITICAL - 2026-10-05 02:42:27 --> [Caused by] mysqli_sql_exception: Unknown column 'fouls_a' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('UPDATE `matches` SET `fouls_a` = 2, `updated_at` = \'2026-10-05 02:42:27\'
+WHERE `matches`.`id` IN (\'2\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `matches` SET `fouls_a` = 2, `updated_at` = \'2026-10-05 02:42:27\'
+WHERE `matches`.`id` IN (\'2\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `matches` SET `fouls_a` = 2, `updated_at` = \'2026-10-05 02:42:27\'
+WHERE `matches`.`id` IN (\'2\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2531): CodeIgniter\Database\BaseConnection->query('UPDATE `matches` SET `fouls_a` = :fouls_a:, `updated_at` = :updated_at:
+WHERE `matches`.`id` IN :matches.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(408): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(1074): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(711): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\Scoreboard.php(102): CodeIgniter\Model->update('2', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Scoreboard->update('2')
+10 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Scoreboard))
+11 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\futsal-scoreboard\\public\\index.php')
+ERROR - 2026-10-05 02:42:28 --> Unknown column 'fouls_a' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('UPDATE `matches` SET `fouls_a` = 1, `updated_at` = \'2026-10-05 02:42:28\'
+WHERE `matches`.`id` IN (\'2\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `matches` SET `fouls_a` = 1, `updated_at` = \'2026-10-05 02:42:28\'
+WHERE `matches`.`id` IN (\'2\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `matches` SET `fouls_a` = 1, `updated_at` = \'2026-10-05 02:42:28\'
+WHERE `matches`.`id` IN (\'2\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2531): CodeIgniter\Database\BaseConnection->query('UPDATE `matches` SET `fouls_a` = :fouls_a:, `updated_at` = :updated_at:
+WHERE `matches`.`id` IN :matches.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(408): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(1074): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(711): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\Scoreboard.php(102): CodeIgniter\Model->update('2', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Scoreboard->update('2')
+10 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Scoreboard))
+11 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\futsal-scoreboard\\public\\index.php')
+CRITICAL - 2026-10-05 02:42:28 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'fouls_a' in 'field list'
+[Method: POST, Route: scoreboard/update/2]
+in SYSTEMPATH\Database\BaseConnection.php on line 863.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2531): CodeIgniter\Database\BaseConnection->query('UPDATE `matches` SET `fouls_a` = :fouls_a:, `updated_at` = :updated_at:
+WHERE `matches`.`id` IN :matches.id:', [...], false)
+ 2 SYSTEMPATH\Model.php(408): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\BaseModel.php(1074): CodeIgniter\Model->doUpdate([...], [...])
+ 4 SYSTEMPATH\Model.php(711): CodeIgniter\BaseModel->update([...], [...])
+ 5 APPPATH\Controllers\Scoreboard.php(102): CodeIgniter\Model->update('2', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Scoreboard->update('2')
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Scoreboard))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\futsal-scoreboard\\public\\index.php')
+CRITICAL - 2026-10-05 02:42:28 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'fouls_a' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `matches` SET `fouls_a` = 1, `updated_at` = \'2026-10-05 02:42:28\'
+WHERE `matches`.`id` IN (\'2\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `matches` SET `fouls_a` = 1, `updated_at` = \'2026-10-05 02:42:28\'
+WHERE `matches`.`id` IN (\'2\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2531): CodeIgniter\Database\BaseConnection->query('UPDATE `matches` SET `fouls_a` = :fouls_a:, `updated_at` = :updated_at:
+WHERE `matches`.`id` IN :matches.id:', [...], false)
+ 4 SYSTEMPATH\Model.php(408): CodeIgniter\Database\BaseBuilder->update()
+ 5 SYSTEMPATH\BaseModel.php(1074): CodeIgniter\Model->doUpdate([...], [...])
+ 6 SYSTEMPATH\Model.php(711): CodeIgniter\BaseModel->update([...], [...])
+ 7 APPPATH\Controllers\Scoreboard.php(102): CodeIgniter\Model->update('2', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Scoreboard->update('2')
+ 9 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Scoreboard))
+10 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\futsal-scoreboard\\public\\index.php')
+CRITICAL - 2026-10-05 02:42:28 --> [Caused by] mysqli_sql_exception: Unknown column 'fouls_a' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('UPDATE `matches` SET `fouls_a` = 1, `updated_at` = \'2026-10-05 02:42:28\'
+WHERE `matches`.`id` IN (\'2\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `matches` SET `fouls_a` = 1, `updated_at` = \'2026-10-05 02:42:28\'
+WHERE `matches`.`id` IN (\'2\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `matches` SET `fouls_a` = 1, `updated_at` = \'2026-10-05 02:42:28\'
+WHERE `matches`.`id` IN (\'2\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2531): CodeIgniter\Database\BaseConnection->query('UPDATE `matches` SET `fouls_a` = :fouls_a:, `updated_at` = :updated_at:
+WHERE `matches`.`id` IN :matches.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(408): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(1074): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(711): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\Scoreboard.php(102): CodeIgniter\Model->update('2', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Scoreboard->update('2')
+10 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Scoreboard))
+11 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\futsal-scoreboard\\public\\index.php')
+ERROR - 2026-10-05 02:42:29 --> Unknown column 'fouls_a' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('UPDATE `matches` SET `fouls_a` = 0, `updated_at` = \'2026-10-05 02:42:29\'
+WHERE `matches`.`id` IN (\'2\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `matches` SET `fouls_a` = 0, `updated_at` = \'2026-10-05 02:42:29\'
+WHERE `matches`.`id` IN (\'2\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `matches` SET `fouls_a` = 0, `updated_at` = \'2026-10-05 02:42:29\'
+WHERE `matches`.`id` IN (\'2\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2531): CodeIgniter\Database\BaseConnection->query('UPDATE `matches` SET `fouls_a` = :fouls_a:, `updated_at` = :updated_at:
+WHERE `matches`.`id` IN :matches.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(408): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(1074): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(711): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\Scoreboard.php(102): CodeIgniter\Model->update('2', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Scoreboard->update('2')
+10 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Scoreboard))
+11 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\futsal-scoreboard\\public\\index.php')
+CRITICAL - 2026-10-05 02:42:29 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'fouls_a' in 'field list'
+[Method: POST, Route: scoreboard/update/2]
+in SYSTEMPATH\Database\BaseConnection.php on line 863.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2531): CodeIgniter\Database\BaseConnection->query('UPDATE `matches` SET `fouls_a` = :fouls_a:, `updated_at` = :updated_at:
+WHERE `matches`.`id` IN :matches.id:', [...], false)
+ 2 SYSTEMPATH\Model.php(408): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\BaseModel.php(1074): CodeIgniter\Model->doUpdate([...], [...])
+ 4 SYSTEMPATH\Model.php(711): CodeIgniter\BaseModel->update([...], [...])
+ 5 APPPATH\Controllers\Scoreboard.php(102): CodeIgniter\Model->update('2', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Scoreboard->update('2')
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Scoreboard))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\futsal-scoreboard\\public\\index.php')
+CRITICAL - 2026-10-05 02:42:29 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'fouls_a' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `matches` SET `fouls_a` = 0, `updated_at` = \'2026-10-05 02:42:29\'
+WHERE `matches`.`id` IN (\'2\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `matches` SET `fouls_a` = 0, `updated_at` = \'2026-10-05 02:42:29\'
+WHERE `matches`.`id` IN (\'2\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2531): CodeIgniter\Database\BaseConnection->query('UPDATE `matches` SET `fouls_a` = :fouls_a:, `updated_at` = :updated_at:
+WHERE `matches`.`id` IN :matches.id:', [...], false)
+ 4 SYSTEMPATH\Model.php(408): CodeIgniter\Database\BaseBuilder->update()
+ 5 SYSTEMPATH\BaseModel.php(1074): CodeIgniter\Model->doUpdate([...], [...])
+ 6 SYSTEMPATH\Model.php(711): CodeIgniter\BaseModel->update([...], [...])
+ 7 APPPATH\Controllers\Scoreboard.php(102): CodeIgniter\Model->update('2', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Scoreboard->update('2')
+ 9 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Scoreboard))
+10 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\futsal-scoreboard\\public\\index.php')
+CRITICAL - 2026-10-05 02:42:29 --> [Caused by] mysqli_sql_exception: Unknown column 'fouls_a' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('UPDATE `matches` SET `fouls_a` = 0, `updated_at` = \'2026-10-05 02:42:29\'
+WHERE `matches`.`id` IN (\'2\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `matches` SET `fouls_a` = 0, `updated_at` = \'2026-10-05 02:42:29\'
+WHERE `matches`.`id` IN (\'2\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `matches` SET `fouls_a` = 0, `updated_at` = \'2026-10-05 02:42:29\'
+WHERE `matches`.`id` IN (\'2\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2531): CodeIgniter\Database\BaseConnection->query('UPDATE `matches` SET `fouls_a` = :fouls_a:, `updated_at` = :updated_at:
+WHERE `matches`.`id` IN :matches.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(408): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(1074): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(711): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\Scoreboard.php(102): CodeIgniter\Model->update('2', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Scoreboard->update('2')
+10 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Scoreboard))
+11 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\futsal-scoreboard\\public\\index.php')
+DEBUG - 2026-10-05 02:48:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-05 03:14:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-05 03:14:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
