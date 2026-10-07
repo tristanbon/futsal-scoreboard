@@ -1,0 +1,242 @@
+DEBUG - 2026-10-07 01:24:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-07 01:24:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-07 01:32:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-07 01:33:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-07 01:45:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-07 01:46:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-07 01:47:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-07 01:52:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-10-07 01:53:30 --> Unknown column 'scheduled_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('INSERT INTO `matches` (`team_a`, `team_b`, `logo_a`, `logo_b`, `half_minutes`, `time_left`, `status`, `scheduled_at`, `created_at`, `updated_at`) VALUES (\'ANFC\', \'CFC\', NULL, NULL, 15, 900, \'scheduled\', \'2026-10-07 10:00:00\', \'2026-10-07 01:53:30\', \'2026-10-07 01:53:30\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `matches` (`team_a`, `team_b`, `logo_a`, `logo_b`, `half_minutes`, `time_left`, `status`, `scheduled_at`, `created_at`, `updated_at`) VALUES (\'ANFC\', \'CFC\', NULL, NULL, 15, 900, \'scheduled\', \'2026-10-07 10:00:00\', \'2026-10-07 01:53:30\', \'2026-10-07 01:53:30\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `matches` (`team_a`, `team_b`, `logo_a`, `logo_b`, `half_minutes`, `time_left`, `status`, `scheduled_at`, `created_at`, `updated_at`) VALUES (\'ANFC\', \'CFC\', NULL, NULL, 15, 900, \'scheduled\', \'2026-10-07 10:00:00\', \'2026-10-07 01:53:30\', \'2026-10-07 01:53:30\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2355): CodeIgniter\Database\BaseConnection->query('INSERT INTO `matches` (`team_a`, `team_b`, `logo_a`, `logo_b`, `half_minutes`, `time_left`, `status`, `scheduled_at`, `created_at`, `updated_at`) VALUES (:team_a:, :team_b:, :logo_a:, :logo_b:, :half_minutes:, :time_left:, :status:, :scheduled_at:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(357): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(670): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Scoreboard.php(55): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Scoreboard->store()
+10 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Scoreboard))
+11 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\futsal-scoreboard\\public\\index.php')
+CRITICAL - 2026-10-07 01:53:30 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'scheduled_at' in 'field list'
+[Method: POST, Route: scoreboard/store]
+in SYSTEMPATH\Database\BaseConnection.php on line 863.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2355): CodeIgniter\Database\BaseConnection->query('INSERT INTO `matches` (`team_a`, `team_b`, `logo_a`, `logo_b`, `half_minutes`, `time_left`, `status`, `scheduled_at`, `created_at`, `updated_at`) VALUES (:team_a:, :team_b:, :logo_a:, :logo_b:, :half_minutes:, :time_left:, :status:, :scheduled_at:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(357): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(670): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Scoreboard.php(55): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Scoreboard->store()
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Scoreboard))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\futsal-scoreboard\\public\\index.php')
+CRITICAL - 2026-10-07 01:53:30 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'scheduled_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `matches` (`team_a`, `team_b`, `logo_a`, `logo_b`, `half_minutes`, `time_left`, `status`, `scheduled_at`, `created_at`, `updated_at`) VALUES (\'ANFC\', \'CFC\', NULL, NULL, 15, 900, \'scheduled\', \'2026-10-07 10:00:00\', \'2026-10-07 01:53:30\', \'2026-10-07 01:53:30\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `matches` (`team_a`, `team_b`, `logo_a`, `logo_b`, `half_minutes`, `time_left`, `status`, `scheduled_at`, `created_at`, `updated_at`) VALUES (\'ANFC\', \'CFC\', NULL, NULL, 15, 900, \'scheduled\', \'2026-10-07 10:00:00\', \'2026-10-07 01:53:30\', \'2026-10-07 01:53:30\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2355): CodeIgniter\Database\BaseConnection->query('INSERT INTO `matches` (`team_a`, `team_b`, `logo_a`, `logo_b`, `half_minutes`, `time_left`, `status`, `scheduled_at`, `created_at`, `updated_at`) VALUES (:team_a:, :team_b:, :logo_a:, :logo_b:, :half_minutes:, :time_left:, :status:, :scheduled_at:, :created_at:, :updated_at:)', [...], false)
+ 4 SYSTEMPATH\Model.php(357): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(670): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\Scoreboard.php(55): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Scoreboard->store()
+ 9 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Scoreboard))
+10 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\futsal-scoreboard\\public\\index.php')
+CRITICAL - 2026-10-07 01:53:30 --> [Caused by] mysqli_sql_exception: Unknown column 'scheduled_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('INSERT INTO `matches` (`team_a`, `team_b`, `logo_a`, `logo_b`, `half_minutes`, `time_left`, `status`, `scheduled_at`, `created_at`, `updated_at`) VALUES (\'ANFC\', \'CFC\', NULL, NULL, 15, 900, \'scheduled\', \'2026-10-07 10:00:00\', \'2026-10-07 01:53:30\', \'2026-10-07 01:53:30\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `matches` (`team_a`, `team_b`, `logo_a`, `logo_b`, `half_minutes`, `time_left`, `status`, `scheduled_at`, `created_at`, `updated_at`) VALUES (\'ANFC\', \'CFC\', NULL, NULL, 15, 900, \'scheduled\', \'2026-10-07 10:00:00\', \'2026-10-07 01:53:30\', \'2026-10-07 01:53:30\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `matches` (`team_a`, `team_b`, `logo_a`, `logo_b`, `half_minutes`, `time_left`, `status`, `scheduled_at`, `created_at`, `updated_at`) VALUES (\'ANFC\', \'CFC\', NULL, NULL, 15, 900, \'scheduled\', \'2026-10-07 10:00:00\', \'2026-10-07 01:53:30\', \'2026-10-07 01:53:30\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2355): CodeIgniter\Database\BaseConnection->query('INSERT INTO `matches` (`team_a`, `team_b`, `logo_a`, `logo_b`, `half_minutes`, `time_left`, `status`, `scheduled_at`, `created_at`, `updated_at`) VALUES (:team_a:, :team_b:, :logo_a:, :logo_b:, :half_minutes:, :time_left:, :status:, :scheduled_at:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(357): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(670): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Scoreboard.php(55): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Scoreboard->store()
+10 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Scoreboard))
+11 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\futsal-scoreboard\\public\\index.php')
+ERROR - 2026-10-07 01:55:41 --> Unknown column 'scheduled_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('INSERT INTO `matches` (`team_a`, `team_b`, `logo_a`, `logo_b`, `half_minutes`, `time_left`, `status`, `scheduled_at`, `created_at`, `updated_at`) VALUES (\'ANFC\', \'CFC\', NULL, NULL, 15, 900, \'scheduled\', \'2026-10-07 10:00:00\', \'2026-10-07 01:55:41\', \'2026-10-07 01:55:41\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `matches` (`team_a`, `team_b`, `logo_a`, `logo_b`, `half_minutes`, `time_left`, `status`, `scheduled_at`, `created_at`, `updated_at`) VALUES (\'ANFC\', \'CFC\', NULL, NULL, 15, 900, \'scheduled\', \'2026-10-07 10:00:00\', \'2026-10-07 01:55:41\', \'2026-10-07 01:55:41\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `matches` (`team_a`, `team_b`, `logo_a`, `logo_b`, `half_minutes`, `time_left`, `status`, `scheduled_at`, `created_at`, `updated_at`) VALUES (\'ANFC\', \'CFC\', NULL, NULL, 15, 900, \'scheduled\', \'2026-10-07 10:00:00\', \'2026-10-07 01:55:41\', \'2026-10-07 01:55:41\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2355): CodeIgniter\Database\BaseConnection->query('INSERT INTO `matches` (`team_a`, `team_b`, `logo_a`, `logo_b`, `half_minutes`, `time_left`, `status`, `scheduled_at`, `created_at`, `updated_at`) VALUES (:team_a:, :team_b:, :logo_a:, :logo_b:, :half_minutes:, :time_left:, :status:, :scheduled_at:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(357): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(670): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Scoreboard.php(55): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Scoreboard->store()
+10 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Scoreboard))
+11 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\futsal-scoreboard\\public\\index.php')
+CRITICAL - 2026-10-07 01:55:41 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'scheduled_at' in 'field list'
+[Method: POST, Route: scoreboard/store]
+in SYSTEMPATH\Database\BaseConnection.php on line 863.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2355): CodeIgniter\Database\BaseConnection->query('INSERT INTO `matches` (`team_a`, `team_b`, `logo_a`, `logo_b`, `half_minutes`, `time_left`, `status`, `scheduled_at`, `created_at`, `updated_at`) VALUES (:team_a:, :team_b:, :logo_a:, :logo_b:, :half_minutes:, :time_left:, :status:, :scheduled_at:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(357): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(670): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Scoreboard.php(55): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Scoreboard->store()
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Scoreboard))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\futsal-scoreboard\\public\\index.php')
+CRITICAL - 2026-10-07 01:55:41 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'scheduled_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `matches` (`team_a`, `team_b`, `logo_a`, `logo_b`, `half_minutes`, `time_left`, `status`, `scheduled_at`, `created_at`, `updated_at`) VALUES (\'ANFC\', \'CFC\', NULL, NULL, 15, 900, \'scheduled\', \'2026-10-07 10:00:00\', \'2026-10-07 01:55:41\', \'2026-10-07 01:55:41\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `matches` (`team_a`, `team_b`, `logo_a`, `logo_b`, `half_minutes`, `time_left`, `status`, `scheduled_at`, `created_at`, `updated_at`) VALUES (\'ANFC\', \'CFC\', NULL, NULL, 15, 900, \'scheduled\', \'2026-10-07 10:00:00\', \'2026-10-07 01:55:41\', \'2026-10-07 01:55:41\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2355): CodeIgniter\Database\BaseConnection->query('INSERT INTO `matches` (`team_a`, `team_b`, `logo_a`, `logo_b`, `half_minutes`, `time_left`, `status`, `scheduled_at`, `created_at`, `updated_at`) VALUES (:team_a:, :team_b:, :logo_a:, :logo_b:, :half_minutes:, :time_left:, :status:, :scheduled_at:, :created_at:, :updated_at:)', [...], false)
+ 4 SYSTEMPATH\Model.php(357): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(670): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\Scoreboard.php(55): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Scoreboard->store()
+ 9 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Scoreboard))
+10 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\futsal-scoreboard\\public\\index.php')
+CRITICAL - 2026-10-07 01:55:41 --> [Caused by] mysqli_sql_exception: Unknown column 'scheduled_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('INSERT INTO `matches` (`team_a`, `team_b`, `logo_a`, `logo_b`, `half_minutes`, `time_left`, `status`, `scheduled_at`, `created_at`, `updated_at`) VALUES (\'ANFC\', \'CFC\', NULL, NULL, 15, 900, \'scheduled\', \'2026-10-07 10:00:00\', \'2026-10-07 01:55:41\', \'2026-10-07 01:55:41\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `matches` (`team_a`, `team_b`, `logo_a`, `logo_b`, `half_minutes`, `time_left`, `status`, `scheduled_at`, `created_at`, `updated_at`) VALUES (\'ANFC\', \'CFC\', NULL, NULL, 15, 900, \'scheduled\', \'2026-10-07 10:00:00\', \'2026-10-07 01:55:41\', \'2026-10-07 01:55:41\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `matches` (`team_a`, `team_b`, `logo_a`, `logo_b`, `half_minutes`, `time_left`, `status`, `scheduled_at`, `created_at`, `updated_at`) VALUES (\'ANFC\', \'CFC\', NULL, NULL, 15, 900, \'scheduled\', \'2026-10-07 10:00:00\', \'2026-10-07 01:55:41\', \'2026-10-07 01:55:41\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2355): CodeIgniter\Database\BaseConnection->query('INSERT INTO `matches` (`team_a`, `team_b`, `logo_a`, `logo_b`, `half_minutes`, `time_left`, `status`, `scheduled_at`, `created_at`, `updated_at`) VALUES (:team_a:, :team_b:, :logo_a:, :logo_b:, :half_minutes:, :time_left:, :status:, :scheduled_at:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(357): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(670): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Scoreboard.php(55): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Scoreboard->store()
+10 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Scoreboard))
+11 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\futsal-scoreboard\\public\\index.php')
+DEBUG - 2026-10-07 01:55:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-07 01:55:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-07 01:55:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-10-07 01:56:26 --> Unknown column 'scheduled_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('INSERT INTO `matches` (`team_a`, `team_b`, `logo_a`, `logo_b`, `half_minutes`, `time_left`, `status`, `scheduled_at`, `created_at`, `updated_at`) VALUES (\'ANFC\', \'Ponkan\', NULL, NULL, 20, 1200, \'scheduled\', \'2026-10-07 10:00:00\', \'2026-10-07 01:56:26\', \'2026-10-07 01:56:26\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `matches` (`team_a`, `team_b`, `logo_a`, `logo_b`, `half_minutes`, `time_left`, `status`, `scheduled_at`, `created_at`, `updated_at`) VALUES (\'ANFC\', \'Ponkan\', NULL, NULL, 20, 1200, \'scheduled\', \'2026-10-07 10:00:00\', \'2026-10-07 01:56:26\', \'2026-10-07 01:56:26\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `matches` (`team_a`, `team_b`, `logo_a`, `logo_b`, `half_minutes`, `time_left`, `status`, `scheduled_at`, `created_at`, `updated_at`) VALUES (\'ANFC\', \'Ponkan\', NULL, NULL, 20, 1200, \'scheduled\', \'2026-10-07 10:00:00\', \'2026-10-07 01:56:26\', \'2026-10-07 01:56:26\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2355): CodeIgniter\Database\BaseConnection->query('INSERT INTO `matches` (`team_a`, `team_b`, `logo_a`, `logo_b`, `half_minutes`, `time_left`, `status`, `scheduled_at`, `created_at`, `updated_at`) VALUES (:team_a:, :team_b:, :logo_a:, :logo_b:, :half_minutes:, :time_left:, :status:, :scheduled_at:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(357): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(670): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Scoreboard.php(55): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Scoreboard->store()
+10 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Scoreboard))
+11 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\futsal-scoreboard\\public\\index.php')
+CRITICAL - 2026-10-07 01:56:26 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'scheduled_at' in 'field list'
+[Method: POST, Route: scoreboard/store]
+in SYSTEMPATH\Database\BaseConnection.php on line 863.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2355): CodeIgniter\Database\BaseConnection->query('INSERT INTO `matches` (`team_a`, `team_b`, `logo_a`, `logo_b`, `half_minutes`, `time_left`, `status`, `scheduled_at`, `created_at`, `updated_at`) VALUES (:team_a:, :team_b:, :logo_a:, :logo_b:, :half_minutes:, :time_left:, :status:, :scheduled_at:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(357): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(670): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Scoreboard.php(55): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Scoreboard->store()
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Scoreboard))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\futsal-scoreboard\\public\\index.php')
+CRITICAL - 2026-10-07 01:56:26 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'scheduled_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `matches` (`team_a`, `team_b`, `logo_a`, `logo_b`, `half_minutes`, `time_left`, `status`, `scheduled_at`, `created_at`, `updated_at`) VALUES (\'ANFC\', \'Ponkan\', NULL, NULL, 20, 1200, \'scheduled\', \'2026-10-07 10:00:00\', \'2026-10-07 01:56:26\', \'2026-10-07 01:56:26\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `matches` (`team_a`, `team_b`, `logo_a`, `logo_b`, `half_minutes`, `time_left`, `status`, `scheduled_at`, `created_at`, `updated_at`) VALUES (\'ANFC\', \'Ponkan\', NULL, NULL, 20, 1200, \'scheduled\', \'2026-10-07 10:00:00\', \'2026-10-07 01:56:26\', \'2026-10-07 01:56:26\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2355): CodeIgniter\Database\BaseConnection->query('INSERT INTO `matches` (`team_a`, `team_b`, `logo_a`, `logo_b`, `half_minutes`, `time_left`, `status`, `scheduled_at`, `created_at`, `updated_at`) VALUES (:team_a:, :team_b:, :logo_a:, :logo_b:, :half_minutes:, :time_left:, :status:, :scheduled_at:, :created_at:, :updated_at:)', [...], false)
+ 4 SYSTEMPATH\Model.php(357): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(670): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\Scoreboard.php(55): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Scoreboard->store()
+ 9 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Scoreboard))
+10 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\futsal-scoreboard\\public\\index.php')
+CRITICAL - 2026-10-07 01:56:26 --> [Caused by] mysqli_sql_exception: Unknown column 'scheduled_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('INSERT INTO `matches` (`team_a`, `team_b`, `logo_a`, `logo_b`, `half_minutes`, `time_left`, `status`, `scheduled_at`, `created_at`, `updated_at`) VALUES (\'ANFC\', \'Ponkan\', NULL, NULL, 20, 1200, \'scheduled\', \'2026-10-07 10:00:00\', \'2026-10-07 01:56:26\', \'2026-10-07 01:56:26\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `matches` (`team_a`, `team_b`, `logo_a`, `logo_b`, `half_minutes`, `time_left`, `status`, `scheduled_at`, `created_at`, `updated_at`) VALUES (\'ANFC\', \'Ponkan\', NULL, NULL, 20, 1200, \'scheduled\', \'2026-10-07 10:00:00\', \'2026-10-07 01:56:26\', \'2026-10-07 01:56:26\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `matches` (`team_a`, `team_b`, `logo_a`, `logo_b`, `half_minutes`, `time_left`, `status`, `scheduled_at`, `created_at`, `updated_at`) VALUES (\'ANFC\', \'Ponkan\', NULL, NULL, 20, 1200, \'scheduled\', \'2026-10-07 10:00:00\', \'2026-10-07 01:56:26\', \'2026-10-07 01:56:26\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2355): CodeIgniter\Database\BaseConnection->query('INSERT INTO `matches` (`team_a`, `team_b`, `logo_a`, `logo_b`, `half_minutes`, `time_left`, `status`, `scheduled_at`, `created_at`, `updated_at`) VALUES (:team_a:, :team_b:, :logo_a:, :logo_b:, :half_minutes:, :time_left:, :status:, :scheduled_at:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(357): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(670): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Scoreboard.php(55): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Scoreboard->store()
+10 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Scoreboard))
+11 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\futsal-scoreboard\\public\\index.php')
+DEBUG - 2026-10-07 01:57:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-07 01:57:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-07 01:57:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-07 01:58:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-07 01:58:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-07 01:58:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-07 01:59:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-07 02:01:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-07 02:01:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-07 02:01:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-07 02:01:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-07 02:02:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-07 02:02:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-07 02:02:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-07 02:02:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-07 02:03:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-07 02:03:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-07 02:06:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-07 02:07:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-07 02:07:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-07 02:08:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-07 02:09:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-07 02:10:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-07 02:10:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-07 02:10:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-07 02:10:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-07 02:10:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-07 02:11:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-07 02:11:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-07 02:12:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-07 02:13:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-07 02:13:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-07 02:14:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-07 02:14:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-07 02:14:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-07 02:14:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

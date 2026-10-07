@@ -77,10 +77,64 @@ $initials = function ($name) {
 
     </div>
 
+    <?php if (session()->getFlashdata('success')): ?>
+        <div class="alert alert-success"><?= esc(session()->getFlashdata('success')) ?></div>
+    <?php endif; ?>
+
+    <?php if (session()->getFlashdata('error')): ?>
+        <div class="alert alert-danger"><?= esc(session()->getFlashdata('error')) ?></div>
+    <?php endif; ?>
+
+    <form method="get" action="<?= base_url('scoreboard/history') ?>" class="row g-2 align-items-end mb-4">
+
+        <div class="col-6 col-md-3">
+            <label for="from" class="form-label mb-1">From</label>
+            <input
+                type="date"
+                id="from"
+                name="from"
+                class="form-control"
+                value="<?= esc($from ?? '', 'attr') ?>"
+            >
+        </div>
+
+        <div class="col-6 col-md-3">
+            <label for="to" class="form-label mb-1">To</label>
+            <input
+                type="date"
+                id="to"
+                name="to"
+                class="form-control"
+                value="<?= esc($to ?? '', 'attr') ?>"
+            >
+        </div>
+
+        <div class="col-12 col-md-3">
+            <label for="status" class="form-label mb-1">Status</label>
+            <select id="status" name="status" class="form-select">
+                <option value="">All</option>
+                <?php foreach (['scheduled' => 'Scheduled', 'live' => 'Live', 'finished' => 'Finished'] as $val => $label): ?>
+                    <option value="<?= $val ?>" <?= ($status ?? '') === $val ? 'selected' : '' ?>><?= $label ?></option>
+                <?php endforeach; ?>
+            </select>
+        </div>
+
+        <div class="col-12 col-md-auto d-flex gap-2">
+            <button type="submit" class="btn btn-primary">Filter</button>
+
+            <?php if (!empty($from) || !empty($to) || !empty($status)): ?>
+                <a href="<?= base_url('scoreboard/history') ?>" class="btn btn-outline-secondary">Clear</a>
+            <?php endif; ?>
+        </div>
+
+    </form>
+
     <?php if (empty($matches)): ?>
 
         <div class="alert alert-info">
-            No matches yet. Create your first match to see it here.
+            <?= (!empty($from) || !empty($to) || !empty($status))
+                ? 'No matches found for the selected filters.'
+                : 'No matches yet. Create your first match to see it here.' ?>
         </div>
 
     <?php else: ?>
@@ -110,7 +164,11 @@ $initials = function ($name) {
                         $sa = (int) ($m['score_a'] ?? 0);
                         $sb = (int) ($m['score_b'] ?? 0);
 
-                        $finished = ($m['status'] ?? 'live') === 'finished';
+                        $finished  = ($m['status'] ?? 'live') === 'finished';
+                        $scheduled = ($m['status'] ?? 'live') === 'scheduled';
+
+                        // scheduled matches show their planned time, others the created time
+                        $when = ($scheduled && !empty($m['scheduled_at'])) ? $m['scheduled_at'] : ($m['created_at'] ?? null);
 
                         $hasHt = isset($m['score_a_ht'], $m['score_b_ht']);
 
@@ -121,7 +179,7 @@ $initials = function ($name) {
                     <tr>
 
                         <td class="text-nowrap">
-                            <?= !empty($m['created_at']) ? esc(date('M d, Y h:i A', strtotime($m['created_at']))) : '-' ?>
+                            <?= !empty($when) ? esc(date('M d, Y h:i A', strtotime($when))) : '-' ?>
                         </td>
 
                         <td class="text-end">
@@ -137,7 +195,7 @@ $initials = function ($name) {
                         </td>
 
                         <td class="text-center score">
-                            <?= $sa ?> - <?= $sb ?>
+                            <?= $scheduled ? 'vs' : $sa . ' - ' . $sb ?>
                         </td>
 
                         <td>
@@ -161,7 +219,9 @@ $initials = function ($name) {
                         </td>
 
                         <td class="text-center">
-                            <?php if ($finished): ?>
+                            <?php if ($scheduled): ?>
+                                <span class="badge text-bg-info">Scheduled</span>
+                            <?php elseif ($finished): ?>
                                 <span class="badge text-bg-success">
                                     <?= $sa === $sb ? 'Draw' : 'Finished' ?>
                                 </span>
@@ -170,13 +230,30 @@ $initials = function ($name) {
                             <?php endif; ?>
                         </td>
 
-                        <td class="text-end">
-                            <a
-                                href="<?= base_url('scoreboard/match/' . (int) $m['id']) ?>"
-                                class="btn btn-sm <?= $finished ? 'btn-outline-primary' : 'btn-warning' ?>"
-                            >
-                                <?= $finished ? 'View' : 'Resume' ?>
-                            </a>
+                        <td class="text-end text-nowrap">
+                            <?php if ($scheduled): ?>
+                                <form method="post" action="<?= base_url('scoreboard/start/' . (int) $m['id']) ?>" class="d-inline">
+                                    <?= csrf_field() ?>
+                                    <button type="submit" class="btn btn-sm btn-success">Start</button>
+                                </form>
+
+                                <form
+                                    method="post"
+                                    action="<?= base_url('scoreboard/cancel/' . (int) $m['id']) ?>"
+                                    class="d-inline"
+                                    onsubmit="return confirm('Cancel this scheduled match?');"
+                                >
+                                    <?= csrf_field() ?>
+                                    <button type="submit" class="btn btn-sm btn-outline-danger">Cancel</button>
+                                </form>
+                            <?php else: ?>
+                                <a
+                                    href="<?= base_url('scoreboard/match/' . (int) $m['id']) ?>"
+                                    class="btn btn-sm <?= $finished ? 'btn-outline-primary' : 'btn-warning' ?>"
+                                >
+                                    <?= $finished ? 'View' : 'Resume' ?>
+                                </a>
+                            <?php endif; ?>
                         </td>
 
                     </tr>

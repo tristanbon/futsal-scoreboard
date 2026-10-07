@@ -16,5 +16,10 @@ $routes->get('/scoreboard/history', 'Scoreboard::history');
 
 //match page
 $routes->get('/scoreboard/match/(:num)', 'Scoreboard::match/$1');
+// start a scheduled match (scheduled -> live)
+$routes->post('/scoreboard/start/(:num)', 'Scoreboard::start/$1');
+// cancel (delete) a scheduled match
+$routes->post('/scoreboard/cancel/(:num)', 'Scoreboard::cancel/$1');
+
 // save live changes from the match page
 $routes->post('/scoreboard/update/(:num)', 'Scoreboard::update/$1');

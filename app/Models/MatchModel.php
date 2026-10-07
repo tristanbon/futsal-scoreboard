@@ -28,7 +28,8 @@ class MatchModel extends Model
         'period',
         'match_time',
         'status',
-        'finished_at'
+        'finished_at',
+        'scheduled_at'
     ];
 
     protected $useTimestamps = true;

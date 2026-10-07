@@ -147,8 +147,34 @@
 
                 </div>
 
+                <div class="mb-3">
+
+                    <label class="form-label d-block">
+                        When
+                    </label>
+
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="mode" id="modeNow" value="now" checked>
+                        <label class="form-check-label" for="modeNow">Start now</label>
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="mode" id="modeLater" value="later">
+                        <label class="form-check-label" for="modeLater">Schedule for later</label>
+                    </div>
+
+                    <input
+                        type="datetime-local"
+                        name="scheduled_at"
+                        id="scheduledAt"
+                        class="form-control mt-2 d-none"
+                    >
+
+                </div>
+
                 <button
                     type="submit"
+                    id="submitBtn"
                     class="btn btn-success"
                 >
                     Start Match
@@ -189,6 +215,24 @@ preset.addEventListener('change', syncHalf);
 custom.addEventListener('input', syncHalf);
 
 syncHalf();
+
+const modeRadios  = document.querySelectorAll('input[name="mode"]');
+const scheduledAt = document.getElementById('scheduledAt');
+const submitBtn   = document.getElementById('submitBtn');
+
+function syncMode()
+{
+    const later = document.getElementById('modeLater').checked;
+
+    scheduledAt.classList.toggle('d-none', !later);
+    scheduledAt.required = later;
+
+    submitBtn.textContent = later ? 'Schedule Match' : 'Start Match';
+}
+
+modeRadios.forEach(r => r.addEventListener('change', syncMode));
+
+syncMode();
 
 </script>
 

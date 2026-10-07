@@ -25,6 +25,20 @@ class Scoreboard extends BaseController
 
     public function store()
     {
+        // "now" starts the match right away, "later" saves it as scheduled
+        $mode        = $this->request->getPost('mode') === 'later' ? 'later' : 'now';
+        $scheduledAt = null;
+
+        if ($mode === 'later') {
+            $scheduledAt = $this->parseDateTime($this->request->getPost('scheduled_at'));
+
+            if ($scheduledAt === null) {
+                return redirect()->back()
+                    ->withInput()
+                    ->with('error', 'Please choose a valid date and time for the scheduled match.');
+            }
+        }
+
         $logoA = $this->saveLogo('logo_a');
         $logoB = $this->saveLogo('logo_b');
 
@@ -45,10 +59,16 @@ class Scoreboard extends BaseController
             'logo_b'    => $logoB,
             'half_minutes' => $halfMinutes,
             'time_left' => $halfMinutes * 60,
-            'status'    => 'live'
+            'status'    => $mode === 'later' ? 'scheduled' : 'live',
+            'scheduled_at' => $scheduledAt,
         ]);
 
         $id = $this->matchModel->getInsertID();
+
+        if ($mode === 'later') {
+            return redirect()->to('/scoreboard/history')
+                ->with('success', 'Match scheduled for ' . date('M d, Y h:i A', strtotime($scheduledAt)) . '.');
+        }
 
         return redirect()->to('/scoreboard/match/' . $id);
     }
@@ -58,11 +78,101 @@ class Scoreboard extends BaseController
      */
     public function history()
     {
+        $from = $this->validDate($this->request->getGet('from'));
+        $to   = $this->validDate($this->request->getGet('to'));
+
+        // only accept known statuses; anything else means "all"
+        $status = $this->request->getGet('status');
+        $status = in_array($status, ['scheduled', 'live', 'finished'], true) ? $status : null;
+
+        // backwards range: swap it
+        if ($from && $to && $from > $to) {
+            [$from, $to] = [$to, $from];
+        }
+
+        if ($from) {
+            $this->matchModel->where('COALESCE(scheduled_at, created_at) >=', $from . ' 00:00:00');
+        }
+
+        if ($to) {
+            $this->matchModel->where('COALESCE(scheduled_at, created_at) <=', $to . ' 23:59:59');
+        }
+
+        if ($status) {
+            $this->matchModel->where('status', $status);
+        }
+
         $matches = $this->matchModel->orderBy('id', 'DESC')->findAll();
 
         return view('scoreboard/history', [
-            'matches' => $matches
+            'matches' => $matches,
+            'from'    => $from,
+            'to'      => $to,
+            'status'  => $status,
         ]);
+    }
+
+    /**
+     * Converts a datetime-local value (Y-m-dTH:i) to Y-m-d H:i:s, or null if invalid.
+     */
+    private function parseDateTime($value): ?string
+    {
+        $value = (string) $value;
+        $dt    = \DateTime::createFromFormat('Y-m-d\TH:i', $value);
+
+        return ($dt && $dt->format('Y-m-d\TH:i') === $value) ? $dt->format('Y-m-d H:i:s') : null;
+    }
+
+    /**
+     * Returns the value if it is a real Y-m-d date, otherwise null.
+     */
+    private function validDate($value): ?string
+    {
+        $value = (string) $value;
+        $dt    = \DateTime::createFromFormat('Y-m-d', $value);
+
+        return ($dt && $dt->format('Y-m-d') === $value) ? $value : null;
+    }
+
+    /**
+     * Scheduled -> live, then opens the scoreboard.
+     */
+    public function start($id)
+    {
+        $match = $this->matchModel->find($id);
+
+        if (!$match) {
+            throw \CodeIgniter\Exceptions\PageNotFoundException::forPageNotFound();
+        }
+
+        if (($match['status'] ?? '') === 'scheduled') {
+            $this->matchModel->update($id, ['status' => 'live']);
+        }
+
+        return redirect()->to('/scoreboard/match/' . (int) $id);
+    }
+
+    /**
+     * Deletes a match that has not started yet. Live and finished matches are kept.
+     */
+    public function cancel($id)
+    {
+        $match = $this->matchModel->find($id);
+
+        if (!$match || ($match['status'] ?? '') !== 'scheduled') {
+            return redirect()->to('/scoreboard/history')
+                ->with('error', 'Only scheduled matches can be cancelled.');
+        }
+
+        foreach (['logo_a', 'logo_b'] as $field) {
+            if (!empty($match[$field]) && is_file(FCPATH . $match[$field])) {
+                @unlink(FCPATH . $match[$field]);
+            }
+        }
+
+        $this->matchModel->delete($id);
+
+        return redirect()->to('/scoreboard/history')->with('success', 'Scheduled match cancelled.');
     }
 
     public function match($id)
@@ -71,6 +181,12 @@ class Scoreboard extends BaseController
 
         if (!$match) {
             throw \CodeIgniter\Exceptions\PageNotFoundException::forPageNotFound();
+        }
+
+        // a scheduled match has to be started first
+        if (($match['status'] ?? '') === 'scheduled') {
+            return redirect()->to('/scoreboard/history')
+                ->with('error', 'This match is scheduled. Press Start when it is time to play.');
         }
 
         return view('scoreboard/match', [
@@ -88,6 +204,10 @@ class Scoreboard extends BaseController
 
         if (!$match) {
             return $this->response->setStatusCode(404)->setJSON(['ok' => false]);
+        }
+
+        if (($match['status'] ?? '') === 'scheduled') {
+            return $this->response->setStatusCode(409)->setJSON(['ok' => false]);
         }
 
         $data = [];
